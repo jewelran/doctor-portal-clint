@@ -1,0 +1,31 @@
+.header-container {
+  height: 800px;
+  position: relative;
+  background-image: url('../../../images/bed.png');
+  background-size: cover;
+  background-position: center center;
+}
+.header-container h1 {
+  color: #3a4256;
+}
+.header-container::after {
+  height: 700px;
+  content: " ";
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 36%;
+  right: 0;
+  background-color: #3a4256;
+}
+.btn-primary {
+    border:none !important;
+}
+button {
+  background: rgb(25, 211, 174);
+  background: linear-gradient(
+    90deg,
+    rgba(25, 211, 174, 1) 7%,
+    rgba(15, 207, 235, 1) 38%
+  );
+}
