@@ -5,7 +5,7 @@ const Appointment = () => {
     return (
         <section style ={{marginTop:"10rem"}} className ="d-flex text-white appointment-container">
             <div  className="md-col-4 img-container">
-                <img style ={{height :" 153%", width:"120%"}} src={appointment} alt="" />
+                <img style ={{height :" 153%", width:"160%", paddingRight:"8rem"}} src={appointment} alt="" />
             </div>
             <div  className="md-col-8">
                     <h5 style ={{color :"#6ACECE"}}>APPOINTMENT</h5>
@@ -13,7 +13,7 @@ const Appointment = () => {
                     <h1 style ={{fontSize:"50px"}}>Today</h1>
                     <p style ={{fontSize:"20px"}} className="pt-4 pb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, officiis rem nihil rerum necessitatibus vero quia quos enim, et delectus, nam adipisci fugit exercitationem. Sequi animi officiis ipsum? Voluptatibus, explicabo.</p>
 
-                    <button className="btn btn-primary">Learn More</button>
+                    <button style ={{cursor:"pointer"}} className="btn btn-primary">Learn More</button>
             </div>
             <div className="overlay"></div>
         </section>

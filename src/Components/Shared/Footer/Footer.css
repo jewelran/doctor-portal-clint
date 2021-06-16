@@ -1,0 +1,17 @@
+.footerContainer{
+    margin-top: 2rem;
+    background-image: url("../../../images/world-map-grey.png");
+    background-position: center center;
+    background-size: cover;
+}
+.footerContainer li:hover, .footerContainer big:hover{
+    color: orange;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.mediaIcon:hover{
+color: #0bfbfb;
+cursor: pointer;
+
+}
