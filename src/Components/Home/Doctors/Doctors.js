@@ -1,31 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import DoctorsDetails from '../DoctorsDetails/DoctorsDetails';
-import doctor from "../../../images/doctor1.png";
+import { useEffect } from 'react';
 const Doctors = () => {
-    const doctors = [
-        {
-            name: "Dr.Caudi",
-            call: "+15697854124",
-            img:doctor
-            
-        },
-        {
-            name: "Dr.John",
-            call: "+15697854124",
-            img:doctor
-        },
-        {
-            name: "Dr.Smith",
-            call: "+15697854124",
-            img:doctor
-        }
-    ]
+    const [doctors, setDoctor] = useState([])
+    useEffect(() => {
+        fetch("http://localhost:5000/doctors")
+        .then(res => res.json())
+        .then(data => setDoctor(data))
+    },[])
+
+   
     return (
-        <div>
+        <div className = "container">
             <div className="">
                 <h1 style ={{color:"#8DD9D9"}} className= "text-center mt-5 mb-5">Our Doctors</h1>
             </div>
-            <div className=" d-flex justify-content-center">
+            <div 
+             className=" d-flex">
                 {
                     doctors.map(doctor => <DoctorsDetails doctor = {doctor}></DoctorsDetails>)
                 }

@@ -22,6 +22,7 @@ const AppointmentForm = ({ modalIsOpen, closeModal, appointmentOn, date }) => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
+    console.log(data);
      data.title = appointmentOn.title;
      data.date = date;
      date.create= new Date();
@@ -74,7 +75,7 @@ const AppointmentForm = ({ modalIsOpen, closeModal, appointmentOn, date }) => {
             />
             <br />
             {errors.name && (
-              <span className="text-danger">This number is required</span>
+              <span className="text-danger">This name is required</span>
             )}
           </div>
           <div className="form-group">
@@ -99,6 +100,44 @@ const AppointmentForm = ({ modalIsOpen, closeModal, appointmentOn, date }) => {
               <span className="text-danger">This email is required</span>
             )}
           </div>
+
+          <div className="form-group">
+            <input
+             className ="w-75"
+              placeholder="Address"
+              {...register("address", { required: true })}
+            />
+            <br />
+            {errors.address && (
+              <span className="text-danger">This address is required</span>
+            )}
+          </div>
+                <div className="d-flex">
+                <div className="form-group">
+            <input
+             className ="w-75"
+              placeholder="Age"
+              {...register("age", { required: true })}
+            />
+            <br />
+            {errors.age && (
+              <span className="text-danger">This age is required</span>
+            )}
+          </div>
+          <div className="form-group">
+            <input
+             className ="w-75"
+              placeholder="Weight"
+              {...register("Weight", { required: true })}
+            />
+            <br />
+            {errors.Weight && (
+              <span className="text-danger">This weight is required</span>
+            )}
+          </div>
+                </div>
+
+          
           <input value="send" type="submit" />
         </form>
       </Modal>

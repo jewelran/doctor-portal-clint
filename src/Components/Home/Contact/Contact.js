@@ -2,7 +2,7 @@ import React from "react";
 import "./Contact.css";
 const Contact = () => {
   return (
-    <div className="pb-5 mb-5 contactContainer d-flex justify-content-center">
+    <div  className="pb-5 mb-5 contactContainer d-flex justify-content-center">
       <div className="p-4">
         <div className="">
           <h4 style={{ color: "#8DD9D9" }}> CONTACT US</h4>

@@ -1,0 +1,16 @@
+.sidebarContainer {
+  background: rgb(25, 211, 175);
+  background: linear-gradient(
+    0deg,
+    rgba(25, 211, 175, 0.8603816526610644) 6%,
+    rgba(15, 207, 232, 1) 64%
+  );
+  height: 98vh;
+}
+.sidebarContainer span{
+    padding-left: 10px;
+}
+ a {
+    color:white;
+
+}
