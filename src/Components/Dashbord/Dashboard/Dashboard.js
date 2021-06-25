@@ -21,7 +21,7 @@ const Dashboard = () => {
   console.log(appointments);
   const handleChange = (data) => {
     setSelectedDate(data);
-    // fetch("http://localhost:5000/appointmentByDate", {
+    // fetch("https://stark-reaches-28571.herokuapp.com/appointmentByDate", {
     //     method:"POST",
     //     headers: {"content-Type": "application/json"},
     //     body: JSON.stringify({data})
@@ -31,7 +31,7 @@ const Dashboard = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:5000/appointmentByDate", {
+    fetch("https://stark-reaches-28571.herokuapp.com/appointmentByDate", {
         method:"POST",
         headers: {"content-Type": "application/json"},
         body: JSON.stringify({data: selectedDate, email: loggedInUser.email})

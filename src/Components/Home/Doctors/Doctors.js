@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 const Doctors = () => {
     const [doctors, setDoctor] = useState([])
     useEffect(() => {
-        fetch("http://localhost:5000/doctors")
+        fetch("https://stark-reaches-28571.herokuapp.com/doctors")
         .then(res => res.json())
         .then(data => setDoctor(data))
     },[])

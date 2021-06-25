@@ -6,7 +6,7 @@ import Sidebar from './../../Dashbord/Sidebar/Sidebar';
 const AllPatient = () => {
     const [doctorAppointments, setDoctorAppointment] = useState([])
     useEffect(() => {
-            fetch("http://localhost:5000/appointment")
+            fetch("https://stark-reaches-28571.herokuapp.com/appointment")
             .then(res => res.json())
             .then(data => setDoctorAppointment(data))
     },[])
